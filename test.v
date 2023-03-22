@@ -47,7 +47,7 @@ module bar (
 
     always @(posedge clk) begin
         if (rst) data <= 32'd0;
-        else if (en) data <= {data[31:1], i};
+        else if (en) data <= {data[30:0], i};
     end
 
     assign o = data[31];
